@@ -6,7 +6,7 @@ This project is just a project example to learn how to use the basics of Ionic (
 
 Download links:
 
-From Github: https://github.com/tcrurav/Ionic5NodeAuthBasic.git
+From Github: https://github.com/tcrurav/BicycleDakarProject.git
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ You need a working environment with:
 The best option to start with this project is cloning it in your PC:
 
 ```
-git clone https://github.com/tcrurav/Ionic5NodeAuthBasic.git
+git clone https://github.com/tcrurav/BicycleDakarProject.git
 ```
 
 This project contains 2 different parts:
@@ -32,20 +32,20 @@ You need a node.js working environment. The LTS is recommended: https://nodejs.o
 Once you have cloned the project install all dependencies.
 
 ```
-cd Ionic5NodeAuthBasic/frontend
+cd BicycleDakarProject/frontend
 npm install
 
-cd Ionic5NodeAuthBasic/backend
+cd BicycleDakarProject/backend
 npm install
 ```
 
 * For your backend part:
-1. You need a Ionic5NodeAuthBasic/backend/.env file with a key for the JWT and the data for the connection to your MySQL Server:
+1. You need a BicycleDakarProject/backend/.env file with a key for the JWT and the data for the connection to your MySQL Server:
 
 ```
 JWT_SECRET=V3RY#1MP0RT@NT$3CR3T#
 
-MYSQL_DATABASE=db_motorbikes_dev
+MYSQL_DATABASE=db_bicycles
 MYSQL_USER=root
 MYSQL_PASSWORD=sasa
 MYSQL_ROOT_PASSWORD=sasa
@@ -57,21 +57,26 @@ NODE_ENV=development
 
 2. You need a mysql server working.
 
-3. Create the mysql database, that in our case is "db_motorbikes_dev". You can import it from the file db_motorbikes_dev.sql included in this project. https://github.com/tcrurav/Ionic5NodeAuthBasic/blob/master/backend/db_motorbikes_dev.sql
+3. Create an empty mysql database called db_bicycles.
+
+4. Use Postman with this collection (https://documenter.getpostman.com/view/3446841/UVJhBtfy) to populate the database with some bicycles.
 
 
 Finally to start enjoying this project.
 
 ```
-cd Ionic5NodeAuthBasic/backend
-npm start
+cd BicycleDakarProject/backend
+node index.js
 
-cd Ionic5NodeAuthBasic/frontend
+cd BicycleDakarProject/frontend
 ionic serve
 ```
 
 Enjoy!!!
 
+## Creating this project from Scratch
+
+Use the docs in the docs directory in this project.
 
 ## Built With
 
@@ -84,7 +89,8 @@ Enjoy!!!
 
 ## Acknowledgments
 
-* https://www.techiediaries.com/ionic/ionic-5-jwt-authentication-node-expressjs/. Excellent tutorial as a basis for learning the Authentication basics needed for this project.
+* https://remotestack.io/ionic-http-requests-with-httpclient-get-post-put-delete-tutorial/. Ionic 5 Http Requests with HttpClient (GET, POST, PUT, Delete) Tutorial.
+* https://www.bezkoder.com/node-js-express-sequelize-mysql/. Node.js Rest APIs example with Express, Sequelize & MySQL.
 * https://www.techiediaries.com/ionic-ui-forms-theming/. Excellent tutorial to create login/register UI in Ionic 5.
 * https://gist.github.com/PurpleBooth/109311bb0361f32d87a2. A very complete template for README.md files.
 * https://www.theserverside.com/video/Follow-these-git-commit-message-guidelines. Guidelines to write properly git commit messages.
